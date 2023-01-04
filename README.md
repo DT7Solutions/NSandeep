@@ -4,10 +4,10 @@
 #install env
 #pip install virtualenv
 # create virtual environment
-#python -m venv env-sandeep
+#python -m venv sandeep
 
 # activate virtual environment
-#env-sandeep\Scripts\activate
+#sandeep\Scripts\activate
 
 # install libs
 pip freeze > requirements.txt 
