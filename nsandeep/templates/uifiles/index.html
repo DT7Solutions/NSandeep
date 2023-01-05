@@ -282,7 +282,7 @@
         <div class="container">
           <div class="section-heading-wrap text-center mb-5">
             <h2 class="heading-h2 text-center divider"><span class="gsap-reveal">Social Meet</span></h2>
-            <span class="gsap-reveal"><img src="images/divider.png" alt="divider" width="76"></span>
+            <span class="gsap-reveal"><img src="{% static 'images/divider.png' %}" alt="divider" width="76"></span>
           </div>
           <div class="row linkedin">
             
@@ -363,7 +363,7 @@
                     <p class="post-meta">{{ postitem.CreatedName }} <span class="small">&bullet; {{ postitem.Create_at }}</span></p>
                   </div>
                 </div>
-                <img src="{{ postitem.Image1}}" class="lazyload" alt="Image" />
+                <img src="{{ postitem.Image1 }}" class="lazyload" alt="Image" />
               </a>
             </div>
             {% endfor%}

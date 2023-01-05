@@ -34,9 +34,9 @@
               {% if selectpost %}
               <h3 class="mb-4">{{selectpost.Title}}</h3>
               <p>{{selectpost.Description1}}</p>
-              <p><img src="{% static 'images/person_woman_3.jpg' %}" alt="Image" class="img-fluid"></p>
+              <p><img src="/media/{{ selectpost.Image1 }}" alt="{{selectpost.Image1}}" class="img-fluid"></p>
               <p>{{selectpost.Description2}}</p>
-              <p><img src="{% static 'images/person_woman_3.jpg' %}" alt="Image" class="img-fluid"></p>
+              <p><img src="/media/{{ selectpost.Image2 }}" alt="{{ selectpost.Image2 }}" class="img-fluid"></p>
               <p>{{selectpost.Description1}}</p>
 
 
