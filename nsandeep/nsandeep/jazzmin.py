@@ -9,7 +9,7 @@ JAZZMIN_SETTINGS = {
     "site_brand": "it's me Sandeep ",
 
     # Logo to use for your site, must be present in static files, used for brand on top left
-    "site_logo": "img/main-img/logo.png",
+    "site_logo": "images/jazmin-logo-150x150 (250 × 250 px).png",
 
     # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
     "login_logo": None,
@@ -24,14 +24,15 @@ JAZZMIN_SETTINGS = {
     "site_icon": None,
 
     # Welcome text on the login screen
-    "welcome_sign": "Welcome to the it's me Sandeep ",
+    "welcome_sign": "Welcome to the it's N Sandeep ",
 
     # Copyright on the footer
-    "copyright": "it's me Sandeep ",
+    "copyright": "it's N Sandeep ",
 
     # List of model admins to search from the search bar, search bar omitted if excluded
     # If you want to use a single search field you dont need to use a list, you can use a simple string 
-    "search_model": ["auth.User", "auth.Group"],
+
+    # "search_model": ["auth.User", "auth.Group"],
 
     # Field name on user model that contains avatar ImageField/URLField/Charfield or a callable that receives the user
     "user_avatar": None,
@@ -47,10 +48,10 @@ JAZZMIN_SETTINGS = {
         {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
 
         # external url that opens in a new window (Permissions can be added)
-        {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+        {"name": "Visite Site", "url": "/", "new_window": True},
 
         # model admin to link to (Permissions checked against model)
-        {"model": "auth.User"},
+        # {"model": "auth.User"},
 
         # App with dropdown menu to all its models pages (Permissions checked against models)
         {"app": "books"},
@@ -61,10 +62,10 @@ JAZZMIN_SETTINGS = {
     #############
 
     # Additional links to include in the user menu on the top right ("app" url type is not allowed)
-    "usermenu_links": [
-        {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
-        {"model": "auth.user"}
-    ],
+    # "usermenu_links": [
+    #     {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues", "new_window": True},
+    #     {"model": "auth.user"}
+    # ],
 
     #############
     # Side Menu #
