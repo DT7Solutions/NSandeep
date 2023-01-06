@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Banner,About,Portfolio,BrandSlider,OurClientReview,Category,BlogPost
+from .models import Banner,About,Portfolio,BrandSlider,OurClientReview,Category,BlogPost,Contact
 
 # Register your models here.
 
@@ -24,9 +24,11 @@ class AdminHappyCategories(admin.ModelAdmin):
     list_display=('Name','Created')
 
 class AdminHappyBlogpost(admin.ModelAdmin):
-    list_display=('Id','Category','Title','Image1','Image2','Description1','Description2','Tags','CreatedName','Create_at')
+    list_display=('Id','Category','Title','Tags','CreatedName','Create_at','status')
+    list_filter = ["CreatedName",'Create_at']
 
-
+class AdminContact(admin.ModelAdmin):
+    list_display=('Id','Name','Email' ,'Message')
 
 admin.site.register(Banner,AdminBanner)
 admin.site.register(About,AdminAbout)
@@ -36,3 +38,5 @@ admin.site.register(OurClientReview,AdminHappyClients)
 
 admin.site.register(Category,AdminHappyCategories)
 admin.site.register(BlogPost,AdminHappyBlogpost)
+
+admin.site.register(Contact,AdminContact)

@@ -51,6 +51,12 @@ class Category(models.Model):
             verbose_name ='Category'
             verbose_name_plural = 'Categories'
 
+STATUS = (
+    (0,"Draft"),
+    (1,"Publish")
+)
+
+
 class BlogPost(models.Model):
     Id = models.AutoField(primary_key=True)
     Category = models.ForeignKey(Category,on_delete=models.CASCADE,related_name='categories')
@@ -62,7 +68,20 @@ class BlogPost(models.Model):
     Tags = models.CharField(max_length=100)
     CreatedName =  models.CharField(max_length=100)
     Create_at = models.DateTimeField(default=datetime.now)
+    status = models.IntegerField(choices=STATUS, default=0)
 
+    class Meta:
+        ordering = ['-Create_at']
 
     def __str__(self):
             return self.Title
+    
+
+
+class Contact(models.Model):
+        Id = models.IntegerField(primary_key = True)
+        Name = models.CharField(max_length=30,default="heading")
+        Email=models.EmailField()
+        Message = models.CharField(max_length=200)
+        def __str__(self):
+            return self.Name

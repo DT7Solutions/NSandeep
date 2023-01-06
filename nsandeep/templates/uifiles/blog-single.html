@@ -2,17 +2,20 @@
 {% load static %}
 {% block content %}
 
-      <div class="cover-v1 jarallax" style="background-image: url('/nsandeep/uploads/banner-sandeep.jpg');">
+
+{% if selectpost %}
+      <div class="cover-v1 jarallax" style="background-image: url('/media/{{ selectpost.Image1 }}');">
         <div class="container">
           <div class="row align-items-center">
               
             <div class="col-md-8 mx-auto text-center">
-              <h1 class="blog-heading" data-aos="fade-up" data-aos-delay="0">A HTML Guide For Beginners</h1>
-              <div class="post-meta" data-aos="fade-up" data-aos-delay="100">By Joefrey on March 15, 2020 &bullet; 5 mins read</div>
+              <h1 class="blog-heading" data-aos="fade-up" data-aos-delay="0">{{selectpost.Title}}</h1>
+              <div class="post-meta" data-aos="fade-up" data-aos-delay="100">{{selectpost.CreatedName}} &bullet; {{selectpost.Create_at}}</div>
             </div>
 
           </div>
         </div>
+    {% endif %}
 
 
         <!-- dov -->
@@ -45,7 +48,7 @@
               </div>
               {% endif %}
 
-            <div class="pt-5">
+            <!-- <div class="pt-5">
               <h3 class="mb-5">1 Comments</h3>
               <ul class="comment-list">
                 <li class="comment">
@@ -59,10 +62,10 @@
                     <p><a href="#" class="reply">Reply</a></p>
                   </div>
                 </li>
-              </ul>
+              </ul> -->
               <!-- END comment-list -->
               
-              <div class="comment-form-wrap pt-5">
+              <!-- <div class="comment-form-wrap pt-5">
                 <h3 class="mb-5">Leave a comment</h3>
                 <form action="#" class="">
                   <div class="form-group">
@@ -87,7 +90,7 @@
                   </div>
 
                 </form>
-              </div>
+              </div> -->
             </div>
             </div>
           </div>

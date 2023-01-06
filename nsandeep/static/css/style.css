@@ -507,11 +507,11 @@ a, a:hover {
   left: 0;
   top: 0;
   margin-top: -130px;
-  background: #fff !important;
+  background:#212F3A !important;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-bottom: 12px;
 }
 
 .unslate_co--site-nav.scrolled .burger-toggle-menu {
@@ -543,11 +543,11 @@ a, a:hover {
 
 .unslate_co--site-nav.scrolled .site-nav-ul > li > a, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a {
   display: block;
-  color: #000;
+  color: rgb(255, 255, 255);
 }
 
 .unslate_co--site-nav.scrolled .site-nav-ul > li > a:hover, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a:hover {
-  color: #D63447;
+  color: #e32f44;
 }
 
 .unslate_co--site-nav.scrolled .site-nav-ul > li > a:before, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a:before {
@@ -556,6 +556,7 @@ a, a:hover {
 
 .unslate_co--site-nav.scrolled .site-nav-ul > li > a.active, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a.active {
   color: #D63447;
+  font-weight: 700;
 }
 
 .unslate_co--site-nav.scrolled .site-nav-ul > li > a.active:before, .unslate_co--site-nav.scrolled .site-nav-ul-none-onepage > li > a.active:before {
@@ -775,7 +776,7 @@ a, a:hover {
 }
 
 .cover-v1 .container, .cover-v1 .container > .row {
-  height: 100vh;
+  height: 50vh;
   min-height: 650px;
 }
 
@@ -1025,6 +1026,12 @@ a, a:hover {
   right: 20px;
   color: #fff;
   top: 20px;
+}
+
+.portfolio-item-content{
+  background-color: aliceblue; 
+  padding:10px;
+  border-radius: 5px;
 }
 
 .portfolio-item .portfolio-item-content, .blog-item .portfolio-item-content {
@@ -1490,8 +1497,13 @@ figure.dotted-bg:before {
 }
 
 .testimonial-slider .owl-dots .owl-dot, .single-slider .owl-dots .owl-dot {
-  display: inline-block;
+  display: none;
 }
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+  display: none;
+}
+
+
 
 .testimonial-slider .owl-dots .owl-dot > span, .single-slider .owl-dots .owl-dot > span {
   margin: 4px;
@@ -2180,6 +2192,20 @@ margin-left: -35px;
   font-weight: 800;
   padding-left: 3px;
   padding-right: 3px;
-
+  margin-left: 4px;
   border-radius: 3px;
+}
+
+
+/* blog pagenation */
+.page-link {
+  position: relative;
+  display: block;
+  /* padding: 0.5rem 0.75rem; */
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #D63447;
+  font-weight: 900;
+  background-color: #fff;
+  border: 2px solid #dee2e6;
 }
