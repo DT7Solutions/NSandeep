@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Banner,Portfolio,About,BrandSlider,OurClientReview,BlogPost
+from .models import Banner,Portfolio,About,BrandSlider,OurClientReview,BlogPost,Contact
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 from django.core.mail import send_mail
