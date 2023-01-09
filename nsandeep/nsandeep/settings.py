@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-d+pc32cd8_qxq338#9lv6gk@=)tuh%il8r-2@6*1p-kq3_j0w(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -139,10 +139,24 @@ JAZZMIN_SETTING = JAZZMIN_SETTINGS
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'connectmagsmen@gmail.com'
-EMAIL_HOST_PASSWORD = 'iekyqkhbcngpydiv'
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_HOST_USER = 'admin@itsnsandeep.com'
+EMAIL_HOST_PASSWORD = 'JhkpVb3n8zW6' #JhkpVb3n8zW6
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 GOOGLE_RECAPTCHA_SECRET_KEY ="6Lfl93YjAAAAAI9dIB-ZZLj9U_yeML609NQNX9q6"
+
+#iekyqkhbcngpydiv
+
+
+# ==========================  badugu dinesh credits  =====================================
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'badugudinesh94@gmail.com'
+# EMAIL_HOST_PASSWORD = 'bqudzklawtmskykk'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
+
+# bqudzklawtmskykk

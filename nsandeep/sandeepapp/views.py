@@ -35,7 +35,7 @@ def home(request):
         message = request.POST.get('message',"")
         
         oContactinfo = Contact(Name=name,Email=email,Message=message)
-        oContactinfo.save()
+        # oContactinfo.save()
     
         sucess =f'hi {name} sucessfully Sending email'
         subject = 'it s n sandeep'
@@ -45,10 +45,10 @@ def home(request):
         From:{}
         '''.format(subject,message,email)
         try:
-            send_mail(subject, message,'noreplaybadugudinesh94@gmail.com',recipient_list=['badugudinesh94@gmail.com']) 
+            send_mail(subject, message,'',recipient_list=['admin@itsnsandeep.com']) 
             messages.success(request,sucess)
         except:
-            messages.error(request,'your emsil sending fail')
+            messages.error(request,'your emails sending fail')
 
     return render(request, 'uifiles/index.html', {'banner_item':banner_item,'portitem_item':portitem_item,'about_item':about_item,'brand_logo':brand_logo,'ourClients':ourClients,'post':post ,'page': page})
 
