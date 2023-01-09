@@ -9,26 +9,6 @@
     <div class="row align-items-center justify-content-between text-left">
       <div class="col-md-5 text-right">
         <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
-          <!-- <li class="has-children">
-            <a href="#home-section" class="nav-link">Home</a>
-            <ul class="dropdown">
-              <li>
-                <a href="index.html">Hero Image BG</a>
-              </li>
-              <li>
-                <a href="index-video.html">Video BG</a>
-              </li>
-              <li>
-                <a href="index-hero-slider.html">Hero Slider</a>
-              </li>
-              <li>
-                <a href="index-sidebar-menu.html">Sidebar Menu</a>
-              </li>
-              <li>
-                <a href="index-right-menu.html">Right Menu</a>
-              </li>
-            </ul>
-          </li> -->
           <li><a href="#home-section" class="nav-link">Home</a></li>
           <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
           <li><a href="#about-section" class="nav-link">About</a></li>
@@ -36,7 +16,9 @@
         </ul>
       </div>
       <div class="site-logo pos-absolute">
+        <!-- {% if brand_logo %} -->
         <a href="#home-section" class="unslate_co--site-logo"><img src="{% static 'images/Sandeep - white.png' %}" alt="" width="300px" style="border-radius: 4px;" class="logo-white"></a>
+        <!-- {% endif %} -->
       </div>
       <div class="col-md-5 text-right text-lg-left">
         <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
@@ -129,11 +111,13 @@
 <!-- =====================================     logo sandeep-banner     ========================= -->
       <div class="unslate_co--section">
         <div class="container">
-          <div class="owl-carousel logo-slider ">
+          <!-- <div class="owl-carousel logo-slider"> -->
             <div class="logo-v1 gsap-reveal d-flex justify-content-center align-items-center">
-              <img src="{% static 'images/Sandeep - black.png' %}" alt="Image" class="img-fluid" width="100px" height="50px">
+              {% if brand_logo %}
+              <img src="media/{{brand_logo.Image}}" alt="Image" class="img-fluid" width="100px" height="50px">
+            {% endif %}
             </div>
-          </div>
+          <!-- </div> -->
         </div>
       </div>
 
@@ -495,7 +479,7 @@
               <div class="contact-info-v1">
                 <div class="gsap-reveal d-block">
                   <span class="d-block contact-info-label">Email</span>
-                  <a href="mailto:itsnsandeep@gmail.com" class="contact-info-val">itsnsandeep@gmail.com</a>
+                  <a href="mailto:itsnsandeep@gmail.com" class="contact-info-val">admin@itsnsandeep.com</a>
                 </div>
                 <div class="gsap-reveal d-block">
                   <span class="d-block contact-info-label">Phone</span>
@@ -503,7 +487,7 @@
                 </div>
                 <div class="gsap-reveal d-block">
                   <span class="d-block contact-info-label">Address</span>
-                  <address class="contact-info-val">208, 212, A.P. Cotton Association Building, Lakshmipuram MainRoad <br>Guntur, Andhra Pradesh.</address>
+                  <address class="contact-info-val">Unit No.202,2nd Floor, M Square Building, Street No. 1, Patrika Nagar, Hyderabad - 500 081 Telangana.</address>
                 </div>
               </div>
             </div>

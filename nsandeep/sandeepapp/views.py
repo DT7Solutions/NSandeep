@@ -10,7 +10,7 @@ def home(request):
     banner_item = Banner.objects.last()
     about_item = About.objects.last()
     portitem_item = Portfolio.objects.all()
-    brand_logo = BrandSlider.objects.all()
+    brand_logo = BrandSlider.objects.last()
     ourClients = OurClientReview.objects.all()
     # post = BlogPost.objects.all()
     
@@ -45,7 +45,7 @@ def home(request):
         From:{}
         '''.format(subject,message,email)
         try:
-            send_mail(subject, message,'noreplayconnectmagsmen@gmail.com',recipient_list=['connect@magsmen.in']) 
+            send_mail(subject, message,'noreplaybadugudinesh94@gmail.com',recipient_list=['badugudinesh94@gmail.com']) 
             messages.success(request,sucess)
         except:
             messages.error(request,'your emsil sending fail')
