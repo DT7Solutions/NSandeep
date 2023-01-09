@@ -23,3 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',  include('sandeepapp.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.UPLOAD_URL, document_root=settings.UPLOAD_URL)
+
+handler404 = "sandeepapp.views.page_not_found_view"
