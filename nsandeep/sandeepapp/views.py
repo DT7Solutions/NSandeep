@@ -35,17 +35,17 @@ def home(request):
         message = request.POST.get('message',"")
         
         oContactinfo = Contact(Name=name,Email=email,Message=message)
-        # oContactinfo.save()
+        oContactinfo.save()
     
         sucess =f'hi {name} sucessfully Sending email'
-        subject = 'it s n sandeep'
+        subject = ''
         message ='''
         Subject:{}
         Message:{}
         From:{}
         '''.format(subject,message,email)
         try:
-            send_mail(subject, message,'',recipient_list=['admin@itsnsandeep.com']) 
+            send_mail(subject, message,'noreplayitsnsandeep@gmail.com',recipient_list=['admin@itsnsandeep.com']) 
             messages.success(request,sucess)
         except:
             messages.error(request,'your emails sending fail')
